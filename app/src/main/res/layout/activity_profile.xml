@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/profilePage"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context=".Profile">
+
+    <EditText
+        android:id="@+id/sessionTime"
+        android:layout_width="280dp"
+        android:layout_height="50dp"
+        android:drawableEnd="@drawable/clock_icon"
+        android:ems="10"
+        android:hint="@string/session_time"
+        android:inputType="numberSigned"
+        android:textColorLink="@color/purple"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+
+    <Switch
+        android:id="@+id/notificationsSwitch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:drawableStart="@drawable/notifications_icon"
+        android:text="@string/allow_notifications"
+        android:textColorLink="@color/purple"
+        android:textSize="18dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/SessionTimeConfirm" />
+
+    <Switch
+        android:id="@+id/locationSwitch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:drawableStart="@drawable/location_icon"
+        android:text="@string/allow_location"
+        android:textColorLink="@color/purple"
+        android:textSize="18dp"
+        app:layout_constraintEnd_toEndOf="@+id/notificationsSwitch"
+        app:layout_constraintTop_toBottomOf="@+id/notificationsSwitch" />
+
+    <Switch
+        android:id="@+id/cameraSwitch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:drawableStart="@drawable/camera_icon"
+        android:text="@string/allow_camera"
+        android:textColorLink="@color/purple"
+        android:textSize="18dp"
+        app:layout_constraintEnd_toEndOf="@+id/locationSwitch"
+        app:layout_constraintTop_toBottomOf="@+id/locationSwitch" />
+
+    <include
+        android:id="@+id/include"
+        layout="@layout/activity_navbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="244dp"
+        android:layout_height="153dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/include"
+        app:srcCompat="@drawable/archery_app_logo" />
+
+    <Button
+        android:id="@+id/SessionTimeConfirm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Confirm Timing"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sessionTime" />
+
+    <Button
+        android:id="@+id/userGuide"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="User Guide"
+        app:layout_constraintEnd_toStartOf="@+id/SessionTimeConfirm"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/include" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context=".Scoring">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/topDisplay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/darker"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/roundNameText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/altWhite"
+            android:textSize="24dp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="@string/portsmouth" />
+
+        <Button
+            android:id="@+id/closeButton"
+            style="@style/Widget.AppCompat.Button.Borderless.Colored"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:icon="@drawable/close"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/buttonContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/darker"
+        app:cardElevation="12dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageView
+            android:id="@+id/missButton"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="8dp"
+            app:cardElevation="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/missbutton" />
+
+        <ImageView
+            android:id="@+id/oneButton"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            app:cardElevation="8dp"
+            app:layout_constraintEnd_toStartOf="@+id/threeButton"
+            app:layout_constraintStart_toEndOf="@+id/missButton"
+            app:layout_constraintTop_toTopOf="@+id/threeButton"
+            app:srcCompat="@drawable/onebutton" />
+
+        <ImageView
+            android:id="@+id/twoButton"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            app:cardElevation="8dp"
+            app:layout_constraintBottom_toBottomOf="@+id/fourButton"
+            app:layout_constraintEnd_toStartOf="@+id/fourButton"
+            app:layout_constraintStart_toEndOf="@+id/missButton"
+            app:srcCompat="@drawable/twobutton" />
+
+        <ImageView
+            android:id="@+id/threeButton"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            app:cardElevation="8dp"
+            app:layout_constraintEnd_toStartOf="@+id/fiveButton"
+            app:layout_constraintStart_toEndOf="@+id/oneButton"
+            app:layout_constraintTop_toTopOf="@+id/fiveButton"
+            app:srcCompat="@drawable/threebutton" />
+
+        <ImageView
+            android:id="@+id/fourButton"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            app:cardElevation="8dp"
+            app:layout_constraintBottom_toBottomOf="@+id/sixButton"
+            app:layout_constraintEnd_toStartOf="@+id/sixButton"
+            app:layout_constraintStart_toEndOf="@+id/twoButton"
+            app:srcCompat="@drawable/fourbutton"
+            tools:layout_editor_absoluteX="137dp" />
+
+        <ImageView
+            android:id="@+id/fiveButton"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            app:cardElevation="8dp"
+            app:layout_constraintTop_toTopOf="@+id/sevenButton"
+            app:layout_constraintEnd_toStartOf="@+id/sevenButton"
+            app:layout_constraintStart_toEndOf="@+id/threeButton"
+            app:srcCompat="@drawable/fivebutton"
+            tools:layout_editor_absoluteX="201dp" />
+
+        <ImageView
+            android:id="@+id/sixButton"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            app:cardElevation="8dp"
+            app:layout_constraintBottom_toBottomOf="@+id/eightButton"
+            app:layout_constraintEnd_toStartOf="@+id/eightButton"
+            app:layout_constraintStart_toEndOf="@+id/fourButton"
+            app:srcCompat="@drawable/sixbutton"
+            tools:layout_editor_absoluteX="201dp" />
+
+        <ImageView
+            android:id="@+id/sevenButton"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            app:cardElevation="8dp"
+            app:layout_constraintEnd_toStartOf="@+id/nineButton"
+            app:layout_constraintStart_toEndOf="@+id/fiveButton"
+            app:layout_constraintTop_toTopOf="@+id/nineButton"
+            app:srcCompat="@drawable/sevenbutton" />
+
+        <ImageView
+            android:id="@+id/eightButton"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            app:cardElevation="8dp"
+            app:layout_constraintBottom_toBottomOf="@+id/tenButton"
+            app:layout_constraintEnd_toStartOf="@+id/tenButton"
+            app:layout_constraintStart_toEndOf="@+id/sixButton"
+            app:srcCompat="@drawable/eightbutton" />
+
+        <ImageView
+            android:id="@+id/nineButton"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            app:cardElevation="8dp"
+            app:layout_constraintBottom_toTopOf="@+id/tenButton"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ninebutton" />
+
+        <ImageView
+            android:id="@+id/tenButton"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            app:cardElevation="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:srcCompat="@drawable/tenbutton" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="wrap_content"
+        android:layout_height="550dp"
+        app:layout_constraintBottom_toTopOf="@+id/buttonContainer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/topDisplay">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <include
+                android:id="@+id/firstDozen"
+                layout="@layout/round_score_card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <include
+                android:id="@+id/secondDozen"
+                layout="@layout/round_score_card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <include
+                android:id="@+id/thirdDozen"
+                layout="@layout/round_score_card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <include
+                android:id="@+id/fourthDozen"
+                layout="@layout/round_score_card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <include
+                android:id="@+id/fifthDozen"
+                layout="@layout/round_score_card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </ScrollView>
+
+    <include
+        android:id="@+id/roundCompleteModal"
+        layout="@layout/round_complete_modal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/buttonContainer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/topDisplay" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

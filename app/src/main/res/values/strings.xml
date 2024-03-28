@@ -1,0 +1,37 @@
+<resources>
+    <string name="app_name">Record Archery Scoring</string>
+
+    <string name="shared_preferences_key">RecordArcheryScoringAppSharedPrefs</string>
+
+    <string name="mainLogoDesc">App Logo</string>
+
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="confirmPW">Confirm Password</string>
+
+    <string name="login">Login</string>
+    <string name="goToRegister">Create an Account</string>
+    <string name="register">Register</string>
+    <string name="goToLogin">Already have an Account?</string>
+
+    <string name="records">Records</string>
+    <string name="score">Score</string>
+    <string name="profile">Profile</string>
+    <string name="location">Location</string>
+    <string name="date">Date</string>
+    <string name="select_round">Select Round:</string>
+    <string name="portsmouth">Portsmouth</string>
+    <string name="wa18">WA18</string>
+    <string name="worcester">Worcester</string>
+    <string name="select_bow_style">Select Bow Style:</string>
+    <string name="recurve">Recurve</string>
+    <string name="barebow">Barebow</string>
+    <string name="compound">Compound</string>
+    <string name="noRecordsHeading">No records to be displayed</string>
+    <string name="noRecordsSubheading">Complete a round to see it displayed here!</string>
+    <string name="complete_round">Complete Round</string>
+    <string name="session_time">Session Time</string>
+    <string name="allow_notifications">Allow Notifications:</string>
+    <string name="allow_location">Allow Location:</string>
+    <string name="allow_camera">Allow Camera:</string>
+</resources>

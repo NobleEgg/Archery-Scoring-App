@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="10dp"
+    android:layout_marginVertical="8dp"
+    android:paddingHorizontal="10dp"
+    android:paddingVertical="10dp">
+
+    <TextView
+        android:id="@+id/totalText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Total:"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/halfDozenTotalBox"
+        app:layout_constraintStart_toStartOf="@+id/halfDozenTotalBox"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/halfDozenTotal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/halfDozenTotalBox"
+        app:layout_constraintEnd_toEndOf="@+id/halfDozenTotalBox"
+        app:layout_constraintStart_toStartOf="@+id/halfDozenTotalBox"
+        app:layout_constraintTop_toTopOf="@+id/halfDozenTotalBox"
+        tools:text="60" />
+
+    <TextView
+        android:id="@+id/halfDozenTotal2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/halfDozenTotal2Box"
+        app:layout_constraintEnd_toEndOf="@+id/halfDozenTotal2Box"
+        app:layout_constraintStart_toStartOf="@+id/halfDozenTotal2Box"
+        app:layout_constraintTop_toTopOf="@+id/halfDozenTotal2Box"
+        tools:text="60" />
+
+    <ImageView
+        android:id="@+id/col1row1"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        app:layout_constraintBottom_toTopOf="@+id/col2row1"
+        app:layout_constraintEnd_toStartOf="@+id/col2row2"
+
+        app:srcCompat="@drawable/empty" />
+
+    <ImageView
+        android:id="@+id/col1row2"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        app:layout_constraintBottom_toTopOf="@+id/col2row1"
+        app:layout_constraintEnd_toStartOf="@+id/col1row3"
+        app:layout_constraintStart_toEndOf="@+id/col1row1"
+        app:srcCompat="@drawable/empty" />
+
+    <ImageView
+        android:id="@+id/col1row3"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        app:layout_constraintBottom_toTopOf="@+id/col2row3"
+        app:layout_constraintEnd_toStartOf="@+id/col1row4"
+        app:srcCompat="@drawable/empty" />
+
+    <ImageView
+        android:id="@+id/col1row4"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        app:layout_constraintBottom_toTopOf="@+id/col2row4"
+        app:layout_constraintEnd_toStartOf="@+id/col1row5"
+        app:srcCompat="@drawable/empty" />
+
+    <ImageView
+        android:id="@+id/col1row5"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+
+        app:layout_constraintBottom_toBottomOf="@+id/col1row6"
+        app:layout_constraintEnd_toStartOf="@+id/col1row6"
+        app:srcCompat="@drawable/empty" />
+
+    <ImageView
+        android:id="@+id/col1row6"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        app:layout_constraintBottom_toTopOf="@+id/col2row6"
+        app:layout_constraintEnd_toStartOf="@+id/halfDozenTotalBox"
+        app:srcCompat="@drawable/empty" />
+
+    <ImageView
+        android:id="@+id/col2row1"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        app:layout_constraintBottom_toBottomOf="@+id/col2row2"
+        app:layout_constraintEnd_toStartOf="@+id/col2row2"
+        app:srcCompat="@drawable/empty" />
+
+    <ImageView
+        android:id="@+id/col2row2"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        app:layout_constraintBottom_toBottomOf="@+id/col2row3"
+        app:layout_constraintEnd_toStartOf="@+id/col2row3"
+        app:srcCompat="@drawable/empty" />
+
+    <ImageView
+        android:id="@+id/col2row3"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        app:layout_constraintBottom_toBottomOf="@+id/col2row4"
+        app:layout_constraintEnd_toStartOf="@+id/col2row4"
+        app:srcCompat="@drawable/empty" />
+
+    <ImageView
+        android:id="@+id/col2row4"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        app:layout_constraintBottom_toBottomOf="@+id/col2row5"
+        app:layout_constraintEnd_toStartOf="@+id/col2row5"
+        app:srcCompat="@drawable/empty" />
+
+    <ImageView
+        android:id="@+id/col2row5"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        app:layout_constraintEnd_toStartOf="@+id/col2row6"
+        app:layout_constraintTop_toBottomOf="@+id/col1row6"
+        app:srcCompat="@drawable/empty" />
+
+    <ImageView
+        android:id="@+id/col2row6"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        app:layout_constraintEnd_toStartOf="@+id/halfDozenTotal2Box"
+        app:layout_constraintTop_toTopOf="@+id/halfDozenTotal2Box"
+        app:srcCompat="@drawable/empty" />
+
+    <ImageView
+        android:id="@+id/halfDozenTotal2Box"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        app:layout_constraintEnd_toEndOf="@+id/halfDozenTotalBox"
+        app:layout_constraintTop_toBottomOf="@+id/halfDozenTotalBox"
+        app:srcCompat="@drawable/empty" />
+
+    <ImageView
+        android:id="@+id/halfDozenTotalBox"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/totalText"
+        app:srcCompat="@drawable/empty" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

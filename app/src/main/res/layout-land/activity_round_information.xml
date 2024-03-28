@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/roundInfoPage"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context=".roundInformation">
+
+    <include
+        android:id="@+id/include2"
+        layout="@layout/activity_navbar"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <AutoCompleteTextView
+        android:id="@+id/location"
+        android:layout_width="280dp"
+        android:layout_height="50dp"
+
+        android:drawableRight="@drawable/location_icon"
+        android:ems="10"
+        android:hint="@string/location"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/include2"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/date"
+        android:layout_width="280dp"
+        android:layout_height="50dp"
+        android:drawableRight="@drawable/calender_icon"
+        android:ems="10"
+        android:hint="@string/date"
+        android:inputType="date"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/include2"
+        app:layout_constraintTop_toBottomOf="@+id/location" />
+
+    <TextView
+        android:id="@+id/roundText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/select_round"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toStartOf="@+id/bowStyleText"
+        app:layout_constraintStart_toEndOf="@+id/include2"
+        app:layout_constraintTop_toBottomOf="@+id/date" />
+
+    <RadioGroup
+        android:id="@+id/roundGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@+id/roundText"
+        app:layout_constraintTop_toBottomOf="@+id/roundText">
+
+        <RadioButton
+            android:id="@+id/Portsmouth"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/portsmouth" />
+
+        <RadioButton
+            android:id="@+id/WA18"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/wa18" />
+
+        <RadioButton
+            android:id="@+id/Worcester"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/worcester" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/bowStyleText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/select_bow_style"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/roundText"
+        app:layout_constraintTop_toTopOf="@+id/roundText" />
+
+    <RadioGroup
+        android:id="@+id/bowStyleGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@+id/bowStyleText"
+        app:layout_constraintTop_toBottomOf="@+id/bowStyleText">
+
+        <RadioButton
+            android:id="@+id/Recurve"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/recurve"
+            android:textSize="16dp" />
+
+        <RadioButton
+            android:id="@+id/Barebow"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/barebow"
+            android:textSize="16dp" />
+
+        <RadioButton
+            android:id="@+id/Compound"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/compound"
+            android:textSize="16dp" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/start"
+        style="@style/Widget.AppCompat.Button"
+        android:layout_width="160dp"
+        android:layout_height="60dp"
+        android:text="Start Round"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/include2"
+        app:layout_constraintTop_toBottomOf="@+id/bowStyleGroup"
+        app:layout_constraintVertical_bias="0.25" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

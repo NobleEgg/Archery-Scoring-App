@@ -1,0 +1,21 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.RecordArcheryScoring" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/primary</item>
+        <item name="colorPrimaryVariant">@color/darker</item>
+        <item name="colorOnPrimary">@color/background</item>
+        <item name="android:textColor">@color/altBlack</item>
+
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor">@color/navy</item>
+        <!-- Customize your theme here. -->
+    </style>
+    <style name="Theme.RecordArcheryScoring.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+    <style name="Theme.RecordArcheryScoring.AppBarOverlay"
+        parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+    <style name="Theme.RecordArcheryScoring.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+</resources>

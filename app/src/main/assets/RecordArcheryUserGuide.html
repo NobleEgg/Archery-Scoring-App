@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Record Archery</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+      
+      header {
+        background-color: #5E73AB;
+        color: #FFFFFF;
+        text-align: center;
+        padding: 1rem;
+      }
+      
+      nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #94A7E3;
+        padding: 0.5rem 1rem;
+      }
+      
+      nav ul {
+        list-style: none;
+        margin: 0;
+        padding: 0.5rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      
+      nav li a {
+        color: #333;
+        text-decoration: none;
+        padding: 0.5rem;
+        border-radius: 1rem;
+        transition: background-color 0.3s ease;
+		margin: 0.5rem;
+      }
+      
+      nav li a:hover {
+        background-color: #002A59;
+        color: #fff;
+      }
+      
+      main {
+        padding: 1rem;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+        justify-content: center;
+      }
+      
+      section {
+        flex-basis: 100%;
+        border: 1px solid #ddd;
+        padding: 1rem;
+        border-radius: 0.5rem;
+      }
+	  
+	  img {
+		width: 60%;
+		height: auto;
+		display: flex;
+		justify-content: center;
+	  }
+      
+      @media screen and (min-width: 768px) {
+        main {
+          max-width: 800px;
+        }
+        
+        section {
+          flex-basis: calc(50% - 1rem);
+        }
+      }
+	  
+	  @media screen and (max-width: 425px) {
+	        nav ul {
+				flex-direction:column;
+				align-items: flex-start;
+				margin-bottom: 10px;
+			}
+		}
+			
+	  }
+    </style>
+  </head>
+ <body>
+    <header>
+      <h1>Record Archery - User Guide</h1>
+    </header>
+    
+    <nav>
+      <ul>
+        <li><a href="#intro">Introduction</a></li>
+        <li><a href="#homepage">Records Page</a></li>
+        <li><a href="#pre-round">Setting Up a Round</a></li>
+        <li><a href="#active-scoring">Scoring a Round</a></li>
+        <li><a href="#profile">Configure Settings</a></li>
+      </ul>
+    </nav>
+    
+    <main>
+      <section id="intro">
+        <h2>Introduction</h2>
+        <p>Record Archery is an application for archers to score rounds as they shoot and track their progress within the sport.</p>
+		<p>The applications allows users to record three different types of archery round with one of three different types of bow.</p>
+		<ul><strong>Bow Styles:</strong>
+			<li><strong>Recurve</strong> - the type of bow used in the Olympic Games, characterised by the use of a sight and stabilisers to aid the archer.</li><br>
+			<li><strong>Barebow</strong> - the type of bow most commonly depicted in media (Robin Hood, Brave etc.) uses no sight or additional shooting aids.</li><br>
+			<li><strong>Compound</strong> - the most advanced type of bow, often used for hunting. Features a system of pulleys to help the archer draw the bow and deliver an incredibly powerful shot.</li>
+		</ul>
+		<ul><strong>Rounds:</strong>
+			<li><strong>Portsmouth</strong> - an indoor round consisting of 60 arrows at a 60cm diameter face from 20 yards.</li><br>
+			<li><strong>WA18</strong> - an indoor round consisting of 60 arrows at a 40cm diameter face from 18 metres.</li><br>
+			<li><strong>Worcester</strong> - an indoor round consiting of 60 arrows at a special black and white target from 20 yards.</li>
+		</ul>
+      </section>
+      
+      <section id="homepage">
+        <h2>Records Page</h2>
+        <p>The homepage is the first screen the user will see after launching the application. Here the user can see all of their previously recorded archery rounds in chronological order.</p>
+		<img src="homepagewithentries.JPG">
+		<p>All rounds and the information associated with them are stored in a local SQL database. If the user has no records stored, a message prompting the user as such will be displayed.</p>
+		<img src="homepagewoentries.JPG">
+		<p>Each card displays all of the information about each round, including a small trophy icon if the score is a new record for the round and bow style.</p>
+	  </section>
+      
+      <section id="pre-round">
+        <h2>Setting Up a Round</h2>
+        <p>Before beginning a round, all the information associated with the round must be entered.</p>
+		<ul><strong>Information Required:</strong>
+			<li>Location</li>
+			<li>Date</li>
+			<li>Type of round</li>
+			<li>Bow style</li>
+		</ul>
+		<p>If location permissions have been enabled, the application will complete your location with your current location.</p>
+		<img src="roundsetup.JPG">
+      </section>
+      
+      <section id="active-scoring">
+        <h2>Active Scoring Page</h2>
+        <p>The name of the round is displayed at the top of the page.</p>
+		<p>The user can end the round at any time by pressing the 'X' icon, however the round will not be saved if incomplete.</p>
+		<p>This page is designed to replicate real world archery score sheets, used in real archery competitions. Each arrow has a box for the score to be written in, with arrows grouped into dozens. All the rounds accessible through the application comprise of five dozen arrows, meaning there are five of these dozen frames.</p>
+		<p>At the end of each row of six, the total for those six arrows will be summed automatically as the user scores.</p>
+		<p>The archer simply presses the corresponding button on the bottom of the screen for their score and the sheet will be automatically filled in.</p>
+		<img src="scoresheet.JPG">
+		<p>Once the round is complete a modal will appear with the user's results</p>
+		<img src="scoresheetmodal.JPG">
+		<p>From here the user can finish the round by pressing either 'X' or 'Complete Round' and the round will be added to the database. The user can also open the camera app, to take a commemorative picture.</p>
+      </section>
+      
+      <section id="profile">
+        <h2>Profile Page</h2>
+        <p>The profile page allows the user to change the permissions associated with the application.</p>
+		<ul><strong>The user can change:</strong>
+			<li>Location permission</li>
+			<li>Notification permission and the time the daily notification is sent</li>
+			<li>Camera permission</li>
+		</ul>
+		<img src="profilepage.JPG">
+      </section>
+    </main>
+  
+  </body>
+</html>
